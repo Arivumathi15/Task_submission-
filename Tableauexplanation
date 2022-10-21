@@ -1,0 +1,34 @@
+Topic: Tableau 
+Arun has the following data of Employees in CSV format 
+Emp_name, Id,Salary
+Ravish,10,1000
+Suresh,101,20000
+Priya,1010,50000
+Neha,10101,70000
+Nitin,1101,15000
+Arun’s Client wants to make all Employee Id (Id) a 7-digit number in Tableau.
+For Example, the updated Employee Id of Priya should be 0001010. Can you suggest any way how Arun 
+can achieve this for all Employees in Tableau? Write steps along with output screenshot
+
+Save the above data in a text or in csv format file.
+
+Import the file into the tableau public .
+
+Go to the worksheet/sheet1.
+
+Drag and drop the columns emp_name, id into the rows in sheet1  .
+
+Right click on the id displayed below data -> tables -> id .
+
+A dropdown box will be appear .
+
+Click calculated field from the drop down list .
+
+A dialogue box will be opened .
+
+Rename it as empid
+
+inside the dialogue box type 
+RIGHT(STR('0000000')+ [Id],7)
+
+A new column empid will be created under tables ,drag and drop it into the rows.
