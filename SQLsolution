@@ -1,0 +1,14 @@
+CREATE TABLE student1 (enrollment_no varchar(10), student_name varchar(10), class_section varchar(10),subject_id varchar(10),marks INT, primary key (enrollment_no));
+
+insert into  student1 values(1,'Tim','A',1,70);
+insert into  student1 values(2,'Jim','A',2,75);
+insert into  student1 values(3,'Kim','B',3,65);
+insert into  student1 values(4,'TOM','B',4,77);
+insert into  student1 values(5,'John','C',5,60);
+insert into  student1 values(6,'JOE','C',1,82);		
+insert into  student1 values(7,'James','B',2,76);
+insert into  student1 values(8,'Henry','C',5,68);
+insert into  student1 values(9,'Matt','B',3,71);
+insert into  student1 values(10,'Paul','A',4,79);
+
+SELECT class_section,COUNT(enrollment_no) AS 'NO. of Candidate greater than or equal to 75 marks' FROM student1 WHERE MARKS>=75 GROUP BY class_section;
